@@ -24,7 +24,7 @@ public class SignAuto {
 		Map<String, String> map = new HashMap<String, String>();
 		
 		map.put("zqid", zqid);//商户的zqid,该值需要与private_key对应
-		map.put("no", "test_contract_004");//已存在的合同编号
+		map.put("no", "test_contract_017");//已存在的合同编号
 		map.put("signers", "company_test_001,company_test_002");//签署人user_code
 
 	    String sign_val = ed.encrptData(map,private_key);

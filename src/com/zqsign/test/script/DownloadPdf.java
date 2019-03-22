@@ -30,12 +30,13 @@ public class DownloadPdf {
 	  
 	    Map<String, String> map = new HashMap<String, String>();
 	    map.put("zqid", zqid);//商户的zqid,该值需要与private_key对应
-	    map.put("no", "test_contract_004");//已存在的合同编号
+	    map.put("no", "test_contract_017");//已存在的合同编号
 	    String sign_val = ed.encrptData(map,private_key);//对请求进行签名加密
 	    
 	    map.put("sign_val", sign_val);//添加签名值
 	    byte[] response_str = HttpRequest.sendPostReturnByte(request_url, map);
-	    FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\zqsign\\Desktop\\文档\\测试\\合同\\房屋租赁合同1.pdf");//存储路径，例：F://test//1.pdf
+	    FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\zqsign\\Desktop\\文档\\测试\\合同\\房屋租赁合同4.pdf");//存储路径
+	    //FileOutputStream fileOutputStream = new FileOutputStream("C:\\Users\\zqsign\\Desktop\\文档\\测试\\合同\\中英普拉提学院学员协议1.pdf");//存储路径
 	    IOUtils.write(response_str, fileOutputStream);
 	    System.out.println("当前文件流已转成PDF文件放在源文件目录下");
 				
