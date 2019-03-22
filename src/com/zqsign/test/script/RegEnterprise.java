@@ -26,12 +26,12 @@ public class RegEnterprise {
 		Map<String,String> map = new HashMap<String,String>();
 		
 		map.put("zqid", zqid);//商户的zqid,该值需要与private_key对应
-	    map.put("user_code", "需要用户修改");//用户唯一标示，该值不能重复
-	    map.put("name", "需要用户修改");//企业名称
-	    map.put("certificate", "需要用户修改");//营业执照号或社会统一代码
-	    map.put("address", "需要用户修改"); //企业注册地址
-	    map.put("contact", "需要用户修改");//联系人
-	    map.put("mobile", "需要用户修改");//联系电话（手机号码）
+	    map.put("user_code", "company_test_002");//用户唯一标示，该值不能重复
+	    map.put("name", "北京某某科技公司");//企业名称
+	    map.put("certificate", "YYZZ43345453131");//营业执照号或社会统一代码
+	    map.put("address", "北京市海淀区"); //企业注册地址
+	    map.put("contact", "赵华");//联系人
+	    map.put("mobile", "18678499392");//联系电话（手机号码）
 	
 	    String sign_val = ed.encrptData(map,private_key);
 	
